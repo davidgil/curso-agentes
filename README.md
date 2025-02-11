@@ -1,19 +1,17 @@
-1. Crea un entorno virtual y actívalo ejecutando:
+1. Create a virtual environment and activate it by running:
 
 ```shell
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-2. Instala paquetes
+2. Install packages
 
 ```shell
 uv sync
 ```
 
-3. Para logear en google cloud
+3. To log in to Google Cloud
 
 ```shell
    gcloud auth application-default login   
 ```
-
-
