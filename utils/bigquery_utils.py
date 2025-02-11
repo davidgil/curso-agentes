@@ -29,7 +29,7 @@ def query_bigquery_batches(
         df = rows.to_dataframe()
         # Join title and text fields
         df["content"] = df.apply(
-            lambda r: f"Title: {r.review_title}. Content: {r.review_text if r.review_text is not None else ''}",
+            lambda r: f"Hotel Name: {r.hotel_name}. Title: {r.review_title}. Content: {r.review_text if r.review_text is not None else ''}",
             axis=1
         )
         yield df
