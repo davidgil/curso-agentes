@@ -3,7 +3,7 @@ from utils.rag import rag
 import time
 
 @standard_llmcache
-def ask_palm(query: str):
+def cached_rag(query: str):
   prompt = PROMPT
   response = rag(query, prompt, verbose=False)
   return response
@@ -25,7 +25,7 @@ ANSWER:
 query = "Best hotel near the Louvre in Paris?"
 
 start_time = time.time()
-response = ask_palm(query)
+response = cached_rag(query)
 end_time = time.time()
 
 execution_time = end_time - start_time
